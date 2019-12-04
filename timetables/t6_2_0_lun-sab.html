@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXp6bnRuIiwiYSI6ImNqenpnMGM2ajE0a3MzbG8xMjV6ZjBuYzgifQ.80nc_zq59i5m2crvztv0Yw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Sun Sep 15 2019 10:10:58 GMT+0200 (Central European Summer Time) using GTFS-to-HTML version 0.17.10 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container-fluid">
+      <div class="row mt-4 mb-4">
+        <div class="col-md-12">
+          <h1 class="timetable-page-label">
+            <div class="route-color-swatch-large" style="background-color: #0096c0"></div><span>LINEA 2 - Direzione Via B. Croce</span>
+          </h1>
+        </div>
+      </div>
+      <div class="timetable" id="timetable_id_T6" data-day-list="Lun-Sab" data-direction-name="Via B. Croce" data-timetable-id="T6" data-direction-id="0" data-route-id="Blu">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="description">LINEA 2 - Direzione Via B. Croce | lunedì-sabato</h2>
+            <div class="service-notes"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="map" id="map_timetable_id_T6"></div>
+          </div>
+        </div>
+        <script>
+          (function() {
+            var id = 'timetable_id_T6';
+            var geojson = {
+              "type": "FeatureCollection",
+              "features": [{
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.874687, 41.262064],
+                    [15.874551, 41.262112],
+                    [15.874583, 41.26216],
+                    [15.874448, 41.262501],
+                    [15.874443, 41.262514],
+                    [15.874441, 41.262642],
+                    [15.874462, 41.262675],
+                    [15.87447, 41.26271],
+                    [15.876826, 41.263298],
+                    [15.87692, 41.263321],
+                    [15.878144, 41.263659],
+                    [15.878289, 41.263698],
+                    [15.878733, 41.263799],
+                    [15.878978, 41.263856],
+                    [15.879036, 41.263828],
+                    [15.87917, 41.263823],
+                    [15.879206, 41.263831],
+                    [15.879286, 41.263892],
+                    [15.879311, 41.263945],
+                    [15.881301, 41.264457],
+                    [15.881509, 41.26451],
+                    [15.882133, 41.264687],
+                    [15.882153, 41.264693],
+                    [15.882257, 41.264711],
+                    [15.882379, 41.264731],
+                    [15.882492, 41.264708],
+                    [15.882539, 41.264713],
+                    [15.882584, 41.264727],
+                    [15.882625, 41.264749],
+                    [15.882678, 41.264812],
+                    [15.882841, 41.264917],
+                    [15.883175, 41.265054],
+                    [15.88367, 41.26518],
+                    [15.883877, 41.265221],
+                    [15.8841, 41.265271],
+                    [15.884247, 41.265288],
+                    [15.884582, 41.265333],
+                    [15.885662, 41.265394],
+                    [15.88569, 41.265396],
+                    [15.88564, 41.265722],
+                    [15.885659, 41.26585],
+                    [15.885755, 41.26605],
+                    [15.885826, 41.266174],
+                    [15.886194, 41.266541],
+                    [15.886243, 41.26659],
+                    [15.885867, 41.266829],
+                    [15.885782, 41.266931],
+                    [15.885802, 41.266995],
+                    [15.88583, 41.267026],
+                    [15.885913, 41.267067],
+                    [15.886092, 41.267093],
+                    [15.886728, 41.267037],
+                    [15.88729, 41.266988],
+                    [15.887427, 41.266956],
+                    [15.887677, 41.266953],
+                    [15.887722, 41.266942],
+                    [15.887763, 41.266905],
+                    [15.887791, 41.266892],
+                    [15.887902, 41.266895],
+                    [15.88793, 41.266908],
+                    [15.887977, 41.266972],
+                    [15.888182, 41.267158],
+                    [15.888308, 41.267236],
+                    [15.888851, 41.267599],
+                    [15.889615, 41.268168],
+                    [15.88987, 41.268359],
+                    [15.893708, 41.271121],
+                    [15.893955, 41.271306],
+                    [15.894209, 41.271473],
+                    [15.894461, 41.271578],
+                    [15.894552, 41.271562],
+                    [15.894578, 41.271556],
+                    [15.894627, 41.271568],
+                    [15.894644, 41.271583],
+                    [15.894652, 41.271602],
+                    [15.894649, 41.271622],
+                    [15.894616, 41.271652],
+                    [15.894597, 41.271713],
+                    [15.894884, 41.274159],
+                    [15.894901, 41.274292],
+                    [15.896714, 41.273526],
+                    [15.896843, 41.273472],
+                    [15.895724, 41.271803],
+                    [15.895431, 41.271367],
+                    [15.894846, 41.27157],
+                    [15.894809, 41.271584],
+                    [15.894706, 41.271597],
+                    [15.894644, 41.271583]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "S.T.C",
+                  "direction_id": 0,
+                  "agency_id": "S.T.C.",
+                  "route_color": "0096c0",
+                  "route_id": "Blu",
+                  "route_long_name": "Linea 2",
+                  "route_short_name": "2",
+                  "route_text_color": "ffffff",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.894578, 41.271556],
+                    [15.894544, 41.27149],
+                    [15.894504, 41.270987],
+                    [15.894163, 41.267943],
+                    [15.894147, 41.267794],
+                    [15.894213, 41.267739],
+                    [15.894275, 41.267688],
+                    [15.894504, 41.267552],
+                    [15.894719, 41.267413],
+                    [15.894841, 41.267316],
+                    [15.894907, 41.267266],
+                    [15.894878, 41.267116],
+                    [15.894968, 41.266763],
+                    [15.895002, 41.266635],
+                    [15.894724, 41.26617],
+                    [15.894507, 41.265724],
+                    [15.895331, 41.265838],
+                    [15.895416, 41.265836],
+                    [15.895619, 41.265758],
+                    [15.895712, 41.265731],
+                    [15.898812, 41.26516],
+                    [15.899039, 41.265118],
+                    [15.903021, 41.264473],
+                    [15.903106, 41.264459],
+                    [15.904701, 41.264215],
+                    [15.905612, 41.264072],
+                    [15.905791, 41.26467],
+                    [15.905921, 41.265179],
+                    [15.906148, 41.265875],
+                    [15.906175, 41.265955],
+                    [15.906299, 41.266222],
+                    [15.906361, 41.266343],
+                    [15.906461, 41.266368],
+                    [15.906766, 41.266352],
+                    [15.908383, 41.266059],
+                    [15.908422, 41.266052],
+                    [15.908598, 41.26599],
+                    [15.908708, 41.265952],
+                    [15.908769, 41.26591],
+                    [15.90881, 41.265901],
+                    [15.908929, 41.265921]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "S.T.C",
+                  "direction_id": 0,
+                  "agency_id": "S.T.C.",
+                  "route_color": "0096c0",
+                  "route_id": "Blu",
+                  "route_long_name": "Linea 2",
+                  "route_short_name": "2",
+                  "route_text_color": "ffffff",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.90889, 41.265914],
+                    [15.908944, 41.265958],
+                    [15.908955, 41.265987],
+                    [15.908955, 41.266017],
+                    [15.908942, 41.266045],
+                    [15.908967, 41.266199],
+                    [15.908976, 41.266276],
+                    [15.909083, 41.266598],
+                    [15.909107, 41.266667],
+                    [15.90931, 41.267199],
+                    [15.909473, 41.267485],
+                    [15.909482, 41.267504],
+                    [15.909815, 41.268047],
+                    [15.909966, 41.268305],
+                    [15.91012, 41.268438],
+                    [15.910149, 41.268463],
+                    [15.910256, 41.268499],
+                    [15.910299, 41.268536],
+                    [15.910327, 41.26858],
+                    [15.910338, 41.268628],
+                    [15.910329, 41.268677],
+                    [15.910386, 41.268861],
+                    [15.911041, 41.269591],
+                    [15.911363, 41.269901],
+                    [15.911616, 41.270096],
+                    [15.912106, 41.270472],
+                    [15.913168, 41.27118],
+                    [15.913258, 41.271257],
+                    [15.913523, 41.271397],
+                    [15.913691, 41.271487],
+                    [15.91825, 41.274054]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "S.T.C",
+                  "direction_id": 0,
+                  "agency_id": "S.T.C.",
+                  "route_color": "0096c0",
+                  "route_id": "Blu",
+                  "route_long_name": "Linea 2",
+                  "route_short_name": "2",
+                  "route_text_color": "ffffff",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.913258, 41.271257],
+                    [15.913134, 41.271216],
+                    [15.912176, 41.270573],
+                    [15.912068, 41.270501],
+                    [15.911318, 41.269925],
+                    [15.91099, 41.269621],
+                    [15.910311, 41.268898],
+                    [15.910219, 41.26884],
+                    [15.910153, 41.268799],
+                    [15.910091, 41.268801],
+                    [15.910031, 41.268791],
+                    [15.909976, 41.268768],
+                    [15.909927, 41.268732],
+                    [15.909896, 41.268686],
+                    [15.90989, 41.268592],
+                    [15.90991, 41.268552],
+                    [15.909952, 41.268509],
+                    [15.91001, 41.268478],
+                    [15.910149, 41.268463]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "S.T.C",
+                  "direction_id": 0,
+                  "agency_id": "S.T.C.",
+                  "route_color": "0096c0",
+                  "route_id": "Blu",
+                  "route_long_name": "Linea 2",
+                  "route_short_name": "2",
+                  "route_text_color": "ffffff",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.9102, 41.268474],
+                    [15.910539, 41.268465],
+                    [15.910606, 41.26844],
+                    [15.91211, 41.267869],
+                    [15.912334, 41.267646],
+                    [15.912354, 41.267637],
+                    [15.91238, 41.267627],
+                    [15.912432, 41.267619],
+                    [15.912555, 41.267652],
+                    [15.912838, 41.267588],
+                    [15.91475, 41.266867],
+                    [15.914975, 41.266777],
+                    [15.915436, 41.26657],
+                    [15.915831, 41.26635],
+                    [15.916183, 41.266157],
+                    [15.916483, 41.265931],
+                    [15.916614, 41.265763],
+                    [15.916655, 41.265712],
+                    [15.916852, 41.265396],
+                    [15.917518, 41.264179],
+                    [15.917555, 41.264124],
+                    [15.917644, 41.264038],
+                    [15.91769, 41.263991],
+                    [15.917751, 41.263953],
+                    [15.917819, 41.263915],
+                    [15.917973, 41.263849],
+                    [15.918044, 41.26379],
+                    [15.91811, 41.263656],
+                    [15.918837, 41.263323],
+                    [15.918713, 41.262814],
+                    [15.918537, 41.262093],
+                    [15.919807, 41.261899],
+                    [15.920202, 41.261857],
+                    [15.920655, 41.261764],
+                    [15.920962, 41.261665],
+                    [15.921114, 41.261567],
+                    [15.921203, 41.261533],
+                    [15.921405, 41.261489],
+                    [15.921724, 41.261488],
+                    [15.921932, 41.26153],
+                    [15.922298, 41.261675],
+                    [15.922408, 41.261758],
+                    [15.922452, 41.261846],
+                    [15.922405, 41.26195],
+                    [15.922302, 41.262035],
+                    [15.92217, 41.262077],
+                    [15.921894, 41.262122],
+                    [15.921768, 41.262132],
+                    [15.921482, 41.262118],
+                    [15.921227, 41.262062],
+                    [15.921085, 41.262004],
+                    [15.920989, 41.261941],
+                    [15.920618, 41.261883],
+                    [15.920202, 41.261857]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "S.T.C",
+                  "direction_id": 0,
+                  "agency_id": "S.T.C.",
+                  "route_color": "0096c0",
+                  "route_id": "Blu",
+                  "route_long_name": "Linea 2",
+                  "route_short_name": "2",
+                  "route_text_color": "ffffff",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.918537, 41.262093],
+                    [15.913377, 41.262863],
+                    [15.913279, 41.262875],
+                    [15.912982, 41.262928],
+                    [15.912922, 41.262941],
+                    [15.912905, 41.26296],
+                    [15.912882, 41.262975],
+                    [15.912826, 41.262991],
+                    [15.912789, 41.26299],
+                    [15.912701, 41.262942],
+                    [15.912688, 41.262916],
+                    [15.912686, 41.262889],
+                    [15.912711, 41.262679],
+                    [15.912294, 41.261756],
+                    [15.912076, 41.261291],
+                    [15.911989, 41.261218],
+                    [15.911902, 41.261145],
+                    [15.911778, 41.261093],
+                    [15.911751, 41.261063],
+                    [15.911735, 41.261029],
+                    [15.91173, 41.260992],
+                    [15.911756, 41.260923],
+                    [15.911784, 41.260893],
+                    [15.911777, 41.260764],
+                    [15.911774, 41.260699],
+                    [15.911382, 41.260144],
+                    [15.911142, 41.259805],
+                    [15.910918, 41.259689],
+                    [15.910716, 41.259682],
+                    [15.91019, 41.259894],
+                    [15.909961, 41.25994],
+                    [15.908867, 41.260161],
+                    [15.90801, 41.260304]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "S.T.C",
+                  "direction_id": 0,
+                  "agency_id": "S.T.C.",
+                  "route_color": "0096c0",
+                  "route_id": "Blu",
+                  "route_long_name": "Linea 2",
+                  "route_short_name": "2",
+                  "route_text_color": "ffffff",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.8747, 41.2621]
+                },
+                "properties": {
+                  "stop_id": "38",
+                  "stop_name": "Via Urbe",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "c81227",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.87708, 41.26331]
+                },
+                "properties": {
+                  "stop_id": "64",
+                  "stop_name": "Via Alassio",
+                  "zone_id": "",
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.87940302, 41.26392454]
+                },
+                "properties": {
+                  "stop_id": "28",
+                  "stop_name": "Via Pigna",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.88141, 41.26444]
+                },
+                "properties": {
+                  "stop_id": "34",
+                  "stop_name": "Via Stella",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89056, 41.26878]
+                },
+                "properties": {
+                  "stop_id": "48",
+                  "stop_name": "Viale U.S.A. (Palazzo Lelli)",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "63aa4e",
+                    "route_id": "Verde",
+                    "route_long_name": "Linea 3",
+                    "route_short_name": "3",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "e6903f",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "9e5891",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89484, 41.27308]
+                },
+                "properties": {
+                  "stop_id": "24",
+                  "stop_name": "Via Manfredonia",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "e6903f",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "9e5891",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89658108, 41.27294638]
+                },
+                "properties": {
+                  "stop_id": "33",
+                  "stop_name": "Via S. Severo",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89416, 41.26772]
+                },
+                "properties": {
+                  "stop_id": "49",
+                  "stop_name": "Viale XXIV Maggio (Chiesa Addolorata)",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "63aa4e",
+                    "route_id": "Verde",
+                    "route_long_name": "Linea 3",
+                    "route_short_name": "3",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.8944, 41.2656]
+                },
+                "properties": {
+                  "stop_id": "6",
+                  "stop_name": "Corso Gramsci",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "63aa4e",
+                    "route_id": "Verde",
+                    "route_long_name": "Linea 3",
+                    "route_short_name": "3",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89764, 41.26533]
+                },
+                "properties": {
+                  "stop_id": "5",
+                  "stop_name": "Corso Garibaldi",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.8997, 41.265]
+                },
+                "properties": {
+                  "stop_id": "7",
+                  "stop_name": "Corso Roma DUOMO",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "63aa4e",
+                    "route_id": "Verde",
+                    "route_long_name": "Linea 3",
+                    "route_short_name": "3",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90373, 41.26431]
+                },
+                "properties": {
+                  "stop_id": "4",
+                  "stop_name": "Corso A. Moro VILLA COMUNALE",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.9061, 41.26548]
+                },
+                "properties": {
+                  "stop_id": "29",
+                  "stop_name": "Via Plebiscito",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90995, 41.26805]
+                },
+                "properties": {
+                  "stop_id": "19",
+                  "stop_name": "Via G. Falcone",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "c81227",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91833489, 41.27396999]
+                },
+                "properties": {
+                  "stop_id": "8",
+                  "stop_name": "OSPEDALE",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "c81227",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "e6903f",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91144, 41.27007]
+                },
+                "properties": {
+                  "stop_id": "41",
+                  "stop_name": "Viale Dott. A Murgolo",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.912, 41.26786]
+                },
+                "properties": {
+                  "stop_id": "46",
+                  "stop_name": "Viale Terminillo SCUOLA \"V CIRCOLO\"",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91903, 41.26209]
+                },
+                "properties": {
+                  "stop_id": "1",
+                  "stop_name": "C.so Scuola Agraria (Pala Tatarella)",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91248812, 41.262391]
+                },
+                "properties": {
+                  "stop_id": "21",
+                  "stop_name": "Via Gen. Dalla Chiesa",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "e6903f",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91127808, 41.26016413]
+                },
+                "properties": {
+                  "stop_id": "31",
+                  "stop_name": "Via S. D'Acquisto",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "e6903f",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.9081, 41.2605]
+                },
+                "properties": {
+                  "stop_id": "13",
+                  "stop_name": "Via B. Croce",
+                  "zone_id": "",
+                  "location_type": 0,
+                  "agency_key": "S.T.C",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "0096c0",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "e6903f",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "9e5891",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "a08c64",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }]
+            };
+            var routeColor = '0096c0';
+            createMap(id, geojson, routeColor);
+          })();
+        </script>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-container">
+              <table class="table table-striped table-horizontal" summary="This table shows schedules for a selection of key stops on the route for LINEA 2 - Direzione Via B. Croce Lun-Sab. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+                <caption class="sr-only">LINEA 2 - Direzione Via B. Croce | Lun-Sab</caption>
+                <colgroup>
+                  <col>
+                  <col class="run_0 trip_short_name_07:30" id="trip_id_Blu001">
+                  <col class="run_1 trip_short_name_08:30" id="trip_id_Blu002">
+                  <col class="run_2 trip_short_name_09:30" id="trip_id_Blu003">
+                  <col class="run_3 trip_short_name_10:30" id="trip_id_Blu004">
+                  <col class="run_4 trip_short_name_11:30" id="trip_id_Blu005">
+                  <col class="run_5 trip_short_name_12:30" id="trip_id_Blu006">
+                  <col class="run_6 trip_short_name_13:30" id="trip_id_Blu007">
+                  <col class="run_7 trip_short_name_14:30" id="trip_id_Blu008">
+                  <col class="run_8 trip_short_name_15:30" id="trip_id_Blu009">
+                  <col class="run_9 trip_short_name_16:30" id="trip_id_Blu010">
+                  <col class="run_10 trip_short_name_17:30" id="trip_id_Blu011">
+                  <col class="run_11 trip_short_name_18:30" id="trip_id_Blu012">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="stop-header" scope="col">Stop</th>
+                    <th class="run-header" scope="col">07:30</th>
+                    <th class="run-header" scope="col">08:30</th>
+                    <th class="run-header" scope="col">09:30</th>
+                    <th class="run-header" scope="col">10:30</th>
+                    <th class="run-header" scope="col">11:30</th>
+                    <th class="run-header" scope="col">12:30</th>
+                    <th class="run-header" scope="col">13:30</th>
+                    <th class="run-header" scope="col">14:30</th>
+                    <th class="run-header" scope="col">15:30</th>
+                    <th class="run-header" scope="col">16:30</th>
+                    <th class="run-header" scope="col">17:30</th>
+                    <th class="run-header" scope="col">18:30</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="stop-row" id="stop_id_38" data-stop-id="38">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Urbe</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:30</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:30</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:30</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:30</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:30</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_64" data-stop-id="64">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Alassio</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:31</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:31</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:31</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:31</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:31</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:31</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_28" data-stop-id="28">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Pigna</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:32</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:32</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:32</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:32</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:32</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:32</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_34" data-stop-id="34">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Stella</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:33</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:33</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:33</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:33</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:33</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_48" data-stop-id="48">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale U.S.A. (Palazzo Lelli)</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:37</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:37</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:37</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:37</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:37</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_24" data-stop-id="24">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Manfredonia</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:38</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:38</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:38</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:38</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:38</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_33" data-stop-id="33">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via S. Severo</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:40</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_49" data-stop-id="49">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale XXIV Maggio (Chiesa Addolorata)</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:42</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:42</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:42</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:42</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:42</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_6" data-stop-id="6">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Corso Gramsci</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:44</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:44</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:44</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:44</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:44</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_5" data-stop-id="5">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Corso Garibaldi</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:46</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:46</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:46</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:46</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:46</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:46</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_7" data-stop-id="7">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Corso Roma DUOMO</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:48</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:48</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:48</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:48</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:48</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_4" data-stop-id="4">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Corso A. Moro VILLA COMUNALE</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:49</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:49</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:49</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:49</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:49</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_29" data-stop-id="29">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Plebiscito</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:50</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:50</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:50</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:50</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:50</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_19" data-stop-id="19">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via G. Falcone</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:51</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:51</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:51</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:51</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:51</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:51</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_8" data-stop-id="8">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">OSPEDALE</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:52</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:52</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:52</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:52</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:52</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:52</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_41" data-stop-id="41">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale Dott. A Murgolo</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:53</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:53</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:53</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:53</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:53</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_46" data-stop-id="46">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale Terminillo SCUOLA &quot;V CIRCOLO&quot;</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:54</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:54</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:54</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:54</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:54</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:54</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_1" data-stop-id="1">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">C.so Scuola Agraria (Pala Tatarella)</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:56</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:56</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:56</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:56</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:56</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_21" data-stop-id="21">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Gen. Dalla Chiesa</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:57</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:57</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:57</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:57</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:57</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_31" data-stop-id="31">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via S. D'Acquisto</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:58</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:58</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:58</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:58</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:58</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_13" data-stop-id="13">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via B. Croce</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:00</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row timetable-bottom"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

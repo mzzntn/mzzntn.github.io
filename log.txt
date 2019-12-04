@@ -1,0 +1,10 @@
+Feed Version: Unknown
+GTFS-to-HTML Version: 0.17.10
+Date Generated: Sun Sep 15 2019 10:11:00 GMT+0200 (Central European Summer Time)
+Timetable Page Count: 9
+Timetable Count: 9
+Calendar Service ID Count: 9
+Route Count: 9
+Trip Count: 142
+Stop Count: 131
+Source: /Users/mzzntn/Nextcloud/GTFS/gtfs.zip
