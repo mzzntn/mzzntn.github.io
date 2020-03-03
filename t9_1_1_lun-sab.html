@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXp6bnRuIiwiYSI6ImNqenpnMGM2ajE0a3MzbG8xMjV6ZjBuYzgifQ.80nc_zq59i5m2crvztv0Yw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Tue Mar 03 2020 08:18:24 GMT+0000 (UTC) using GTFS-to-HTML version 0.18.3 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container-fluid">
+      <div class="row mt-4 mb-4">
+        <div class="col-md-12">
+          <h1 class="timetable-page-label">
+            <div class="route-color-swatch-large" style="background-color: #E51C22"></div><span>LINEA 1 - Direzione Piazza Della Libertà</span>
+          </h1>
+        </div>
+      </div>
+      <div class="timetable" id="timetable_id_T9" data-day-list="Lun-Sab" data-direction-name="Piazza Della Libertà" data-timetable-id="T9" data-direction-id="1" data-route-id="Rossa">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="description">LINEA 1 - Direzione Piazza Della Libertà | lunedì-sabato</h2>
+            <div class="service-notes"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="map" id="map_timetable_id_T9"></div>
+          </div>
+        </div>
+        <script>
+          (function() {
+            var id = 'timetable_id_T9';
+            var geojson = {
+              "type": "FeatureCollection",
+              "features": [{
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.918277, 41.274069],
+                    [15.914189, 41.271769],
+                    [15.913691, 41.271487],
+                    [15.913258, 41.271257],
+                    [15.913134, 41.271216],
+                    [15.912068, 41.270501],
+                    [15.911318, 41.269925],
+                    [15.91099, 41.269621],
+                    [15.910311, 41.268898],
+                    [15.910219, 41.26884],
+                    [15.910153, 41.268799],
+                    [15.910091, 41.268801],
+                    [15.910031, 41.268791],
+                    [15.909927, 41.268732],
+                    [15.909896, 41.268686],
+                    [15.909884, 41.268634],
+                    [15.90991, 41.268552],
+                    [15.909876, 41.268339],
+                    [15.909563, 41.267843],
+                    [15.909368, 41.267534],
+                    [15.909217, 41.267232],
+                    [15.908908, 41.266346],
+                    [15.908867, 41.266247],
+                    [15.908851, 41.266218],
+                    [15.908783, 41.266095],
+                    [15.908705, 41.266045],
+                    [15.908692, 41.266014],
+                    [15.908693, 41.265982],
+                    [15.908708, 41.265952],
+                    [15.908618, 41.265282],
+                    [15.908567, 41.264957],
+                    [15.908474, 41.264407],
+                    [15.908305, 41.263703],
+                    [15.908294, 41.263657],
+                    [15.907661, 41.261357],
+                    [15.907532, 41.260887],
+                    [15.907495, 41.260789],
+                    [15.907189, 41.260342],
+                    [15.907185, 41.260309],
+                    [15.907195, 41.260276],
+                    [15.907251, 41.260227],
+                    [15.90729, 41.260215],
+                    [15.907374, 41.26022],
+                    [15.90741, 41.260236],
+                    [15.907969, 41.260236],
+                    [15.908021, 41.260234],
+                    [15.908515, 41.26015],
+                    [15.908853, 41.260092],
+                    [15.909954, 41.259873],
+                    [15.910163, 41.259827],
+                    [15.910946, 41.259481],
+                    [15.911666, 41.259161],
+                    [15.911651, 41.258089],
+                    [15.911651, 41.258029],
+                    [15.911583, 41.25628],
+                    [15.911568, 41.255847],
+                    [15.91129, 41.25576],
+                    [15.910426, 41.256396],
+                    [15.910032, 41.256693],
+                    [15.90896, 41.255944],
+                    [15.908694, 41.255857],
+                    [15.908109, 41.255468],
+                    [15.90682, 41.25455],
+                    [15.906157, 41.255093],
+                    [15.906063, 41.255171],
+                    [15.90438, 41.256629],
+                    [15.904111, 41.256892],
+                    [15.902814, 41.256004],
+                    [15.902606, 41.255832],
+                    [15.902133, 41.255439],
+                    [15.901978, 41.255355],
+                    [15.901867, 41.255355],
+                    [15.901781, 41.255414],
+                    [15.901412, 41.256014],
+                    [15.901161, 41.256374],
+                    [15.901034, 41.256556],
+                    [15.900612, 41.256727],
+                    [15.900045, 41.256953],
+                    [15.899893, 41.256988],
+                    [15.899412, 41.25702],
+                    [15.899142, 41.256994],
+                    [15.898911, 41.256958],
+                    [15.898154, 41.256687],
+                    [15.89802, 41.25664],
+                    [15.897942, 41.256798],
+                    [15.89583, 41.256734],
+                    [15.895473, 41.256723],
+                    [15.895446, 41.257271],
+                    [15.895443, 41.257338],
+                    [15.894158, 41.257293],
+                    [15.892716, 41.257245],
+                    [15.893025, 41.259511],
+                    [15.89309, 41.259938],
+                    [15.892482, 41.260104],
+                    [15.892107, 41.260216],
+                    [15.891715, 41.260365],
+                    [15.89165, 41.260395],
+                    [15.891385, 41.260555],
+                    [15.89085, 41.260944],
+                    [15.890706, 41.261048],
+                    [15.88994, 41.261574],
+                    [15.88967, 41.261751],
+                    [15.889278, 41.262026],
+                    [15.889297, 41.262041]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "direction_id": 1,
+                  "agency_id": "S.T.C.",
+                  "route_color": "E51C22",
+                  "route_id": "Rossa",
+                  "route_long_name": "Linea 1",
+                  "route_short_name": "1",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.889278, 41.262026],
+                    [15.888911, 41.262278],
+                    [15.888765, 41.262362],
+                    [15.888554, 41.262332],
+                    [15.888375, 41.262274],
+                    [15.887824, 41.262247],
+                    [15.887596, 41.262167],
+                    [15.885651, 41.261205],
+                    [15.885073, 41.260915],
+                    [15.8826, 41.259636],
+                    [15.881191, 41.258865],
+                    [15.880299, 41.259903],
+                    [15.880295, 41.260118],
+                    [15.88015, 41.260418],
+                    [15.880022, 41.260685],
+                    [15.879243, 41.260643],
+                    [15.878457, 41.260599],
+                    [15.878211, 41.261131],
+                    [15.878001, 41.261584],
+                    [15.877923, 41.261545],
+                    [15.877408, 41.261291],
+                    [15.876877, 41.260918],
+                    [15.876804, 41.260866],
+                    [15.875725, 41.260299],
+                    [15.875623, 41.260245],
+                    [15.875448, 41.260704],
+                    [15.875455, 41.260798],
+                    [15.875211, 41.261355],
+                    [15.874983, 41.261885],
+                    [15.87491, 41.261983],
+                    [15.874747, 41.262043],
+                    [15.874551, 41.262112],
+                    [15.874583, 41.26216],
+                    [15.874448, 41.262501],
+                    [15.874443, 41.262514],
+                    [15.874441, 41.262642],
+                    [15.874462, 41.262675],
+                    [15.87447, 41.26271],
+                    [15.876826, 41.263298],
+                    [15.87692, 41.263321],
+                    [15.878144, 41.263659],
+                    [15.878289, 41.263698],
+                    [15.878733, 41.263799],
+                    [15.878978, 41.263856],
+                    [15.879036, 41.263828],
+                    [15.87917, 41.263823],
+                    [15.879206, 41.263831],
+                    [15.879286, 41.263892],
+                    [15.879311, 41.263945],
+                    [15.881509, 41.26451],
+                    [15.882153, 41.264693],
+                    [15.882257, 41.264711],
+                    [15.882379, 41.264731],
+                    [15.882492, 41.264708],
+                    [15.882539, 41.264713],
+                    [15.882584, 41.264727],
+                    [15.882625, 41.264749],
+                    [15.882657, 41.264778],
+                    [15.882678, 41.264812],
+                    [15.882893, 41.26494],
+                    [15.883116, 41.26504],
+                    [15.883877, 41.265221],
+                    [15.8841, 41.265271],
+                    [15.884247, 41.265288],
+                    [15.884582, 41.265333],
+                    [15.886908, 41.265451],
+                    [15.887186, 41.265471],
+                    [15.88741, 41.26487],
+                    [15.887758, 41.264939],
+                    [15.887863, 41.264638],
+                    [15.887908, 41.264584],
+                    [15.888502, 41.262828],
+                    [15.888602, 41.262535],
+                    [15.888765, 41.262362]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "direction_id": 1,
+                  "agency_id": "S.T.C.",
+                  "route_color": "E51C22",
+                  "route_id": "Rossa",
+                  "route_long_name": "Linea 1",
+                  "route_short_name": "1",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.888911, 41.262278],
+                    [15.892734, 41.262325],
+                    [15.893405, 41.26233],
+                    [15.898418, 41.262905]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "direction_id": 1,
+                  "agency_id": "S.T.C.",
+                  "route_color": "E51C22",
+                  "route_id": "Rossa",
+                  "route_long_name": "Linea 1",
+                  "route_short_name": "1",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91833489, 41.27396999]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "8",
+                  "stop_name": "OSPEDALE",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "009FE3",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "F29100",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.9097, 41.2682]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "20",
+                  "stop_name": "Via G. Falcone (ex-Tribunale)",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "009FE3",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "F29100",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90819, 41.26361]
+                },
+                "properties": {
+                  "stop_id": "68",
+                  "stop_name": "Via P. Borsellino (ang. C.so A. Moro)",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90969, 41.25985]
+                },
+                "properties": {
+                  "stop_id": "69",
+                  "stop_name": "Via dei Mandorli",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91151, 41.25661]
+                },
+                "properties": {
+                  "stop_id": "66",
+                  "stop_name": "Via degli Oleandri SCUOLA \"PADRE PIO\"",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.91103, 41.25612]
+                },
+                "properties": {
+                  "stop_id": "62",
+                  "stop_name": "Viale fra Daniele",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89873, 41.25696]
+                },
+                "properties": {
+                  "stop_id": "70",
+                  "stop_name": "Viale Luogosanto CIMITERO",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "63B32E",
+                    "route_id": "Verde",
+                    "route_long_name": "Linea 3",
+                    "route_short_name": "3",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89552, 41.2569]
+                },
+                "properties": {
+                  "stop_id": "71",
+                  "stop_name": "Via M. SS. di Ripalta SCUOLA \"PAOLILLO\"",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89394, 41.25732]
+                },
+                "properties": {
+                  "stop_id": "72",
+                  "stop_name": "Via L'Acquila",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.8916, 41.2605]
+                },
+                "properties": {
+                  "stop_id": "73",
+                  "stop_name": "Viale di Ponente",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.87926, 41.26068]
+                },
+                "properties": {
+                  "stop_id": "65",
+                  "stop_name": "Via Alassio",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.8747, 41.2621]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "38",
+                  "stop_name": "Via Urbe",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "009FE3",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.88556, 41.26534]
+                },
+                "properties": {
+                  "stop_id": "75",
+                  "stop_name": "Via Torricelli",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.88802, 41.26403]
+                },
+                "properties": {
+                  "stop_id": "76",
+                  "stop_name": "Viale di Ponente",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "A84E98",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89129, 41.26225]
+                },
+                "properties": {
+                  "stop_id": "59",
+                  "stop_name": "Via Consolare",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89879, 41.26308]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "10",
+                  "stop_name": "Piazza Della Libertà",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "63B32E",
+                    "route_id": "Verde",
+                    "route_long_name": "Linea 3",
+                    "route_short_name": "3",
+                    "route_text_color": ""
+                  }]
+                }
+              }]
+            };
+            var routeColor = 'E51C22';
+            createMap(id, geojson, routeColor);
+          })();
+        </script>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-container">
+              <table class="table table-striped table-horizontal" summary="This table shows schedules for a selection of key stops on the route for LINEA 1 - Direzione Piazza Della Libertà Lun-Sab. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+                <caption class="sr-only">LINEA 1 - Direzione Piazza Della Libertà | Lun-Sab</caption>
+                <colgroup>
+                  <col>
+                  <col class="run_0 trip_short_name_07:20" id="trip_id_Rossa021">
+                  <col class="run_1 trip_short_name_08:00" id="trip_id_Rossa022">
+                  <col class="run_2 trip_short_name_08:40" id="trip_id_Rossa023">
+                  <col class="run_3 trip_short_name_09:20" id="trip_id_Rossa024">
+                  <col class="run_4 trip_short_name_10:00" id="trip_id_Rossa025">
+                  <col class="run_5 trip_short_name_10:40" id="trip_id_Rossa026">
+                  <col class="run_6 trip_short_name_11:20" id="trip_id_Rossa027">
+                  <col class="run_7 trip_short_name_12:00" id="trip_id_Rossa028">
+                  <col class="run_8 trip_short_name_12:40" id="trip_id_Rossa029">
+                  <col class="run_9 trip_short_name_13:20" id="trip_id_Rossa030">
+                  <col class="run_10 trip_short_name_14:00" id="trip_id_Rossa031">
+                  <col class="run_11 trip_short_name_14:40" id="trip_id_Rossa032">
+                  <col class="run_12 trip_short_name_15:20" id="trip_id_Rossa033">
+                  <col class="run_13 trip_short_name_16:00" id="trip_id_Rossa034">
+                  <col class="run_14 trip_short_name_16:40" id="trip_id_Rossa035">
+                  <col class="run_15 trip_short_name_17:20" id="trip_id_Rossa036">
+                  <col class="run_16 trip_short_name_18:00" id="trip_id_Rossa037">
+                  <col class="run_17 trip_short_name_18:40" id="trip_id_Rossa038">
+                  <col class="run_18 trip_short_name_19:20" id="trip_id_Rossa039">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="stop-header" scope="col">Stop</th>
+                    <th class="run-header" scope="col">07:20</th>
+                    <th class="run-header" scope="col">08:00</th>
+                    <th class="run-header" scope="col">08:40</th>
+                    <th class="run-header" scope="col">09:20</th>
+                    <th class="run-header" scope="col">10:00</th>
+                    <th class="run-header" scope="col">10:40</th>
+                    <th class="run-header" scope="col">11:20</th>
+                    <th class="run-header" scope="col">12:00</th>
+                    <th class="run-header" scope="col">12:40</th>
+                    <th class="run-header" scope="col">13:20</th>
+                    <th class="run-header" scope="col">14:00</th>
+                    <th class="run-header" scope="col">14:40</th>
+                    <th class="run-header" scope="col">15:20</th>
+                    <th class="run-header" scope="col">16:00</th>
+                    <th class="run-header" scope="col">16:40</th>
+                    <th class="run-header" scope="col">17:20</th>
+                    <th class="run-header" scope="col">18:00</th>
+                    <th class="run-header" scope="col">18:40</th>
+                    <th class="run-header" scope="col">19:20</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="stop-row" id="stop_id_8" data-stop-id="8">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">OSPEDALE</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:20</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:20</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:20</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_20" data-stop-id="20">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via G. Falcone (ex-Tribunale)</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:21</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:01</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:41</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:21</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:01</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:41</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:21</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:01</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:41</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:21</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:01</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:41</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:21</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:01</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:41</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:21</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:01</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:41</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:21</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_68" data-stop-id="68">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via P. Borsellino (ang. C.so A. Moro)</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:22</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:02</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:42</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:22</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:02</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:42</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:22</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:02</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:22</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:02</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:22</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:02</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:22</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:02</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:42</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:22</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_69" data-stop-id="69">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via dei Mandorli</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:23</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:03</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:43</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:23</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:03</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:43</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:23</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:03</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:43</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:23</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:03</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:43</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:23</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:03</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:43</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:23</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:03</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:43</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:23</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_66" data-stop-id="66">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via degli Oleandri SCUOLA &quot;PADRE PIO&quot;</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:24</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:04</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:44</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:24</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:04</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:44</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:24</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:04</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:24</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:04</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:24</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:04</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:24</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:04</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:44</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:24</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_62" data-stop-id="62">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale fra Daniele</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:25</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:05</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:45</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:25</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:05</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:45</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:25</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:05</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:45</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:25</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:05</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:45</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:25</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:05</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:45</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:25</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:05</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:45</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:25</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_70" data-stop-id="70">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale Luogosanto CIMITERO</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:28</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:08</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:48</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:28</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:08</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:48</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:28</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:08</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:28</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:08</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:28</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:08</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:28</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:08</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:48</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:28</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_71" data-stop-id="71">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via M. SS. di Ripalta SCUOLA &quot;PAOLILLO&quot;</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:29</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:09</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:49</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:29</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:09</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:49</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:29</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:09</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:29</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:09</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:29</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:09</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:29</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:09</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:49</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:29</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_72" data-stop-id="72">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via L'Acquila</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:30</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:10</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:50</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:30</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:10</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:50</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:10</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:10</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:10</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:30</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:10</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:50</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:30</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_73" data-stop-id="73">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale di Ponente</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:33</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:13</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:53</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:33</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:13</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:53</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:13</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:13</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:13</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:33</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:13</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:53</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:33</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_65" data-stop-id="65">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Alassio</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:35</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:15</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:55</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:35</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:15</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:55</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:35</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:15</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:55</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:35</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:15</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:55</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:35</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:15</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:55</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:35</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:15</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:55</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:35</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_38" data-stop-id="38">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Urbe</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:36</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:16</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:56</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:36</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:16</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:56</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:36</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:16</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:36</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:16</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:36</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:16</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:36</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:16</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:56</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:36</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_75" data-stop-id="75">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Torricelli</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:37</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:17</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:57</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:37</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:17</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:57</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:17</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:17</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:17</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:37</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:17</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:57</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:37</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_76" data-stop-id="76">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Viale di Ponente</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:38</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:18</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:58</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:38</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:18</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:58</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:18</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:18</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:18</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:38</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:18</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:58</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:38</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_59" data-stop-id="59">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Consolare</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:39</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:19</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:59</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:39</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:19</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:59</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:39</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:19</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:59</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:39</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:19</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:59</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:39</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:19</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:59</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:39</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:19</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:59</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:39</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_10" data-stop-id="10">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Piazza Della Libertà</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:20</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">09:40</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">10:20</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:00</span></td>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">11:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">12:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">15:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">16:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">17:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">18:20</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">19:40</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row timetable-bottom"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

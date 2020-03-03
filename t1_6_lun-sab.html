@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXp6bnRuIiwiYSI6ImNqenpnMGM2ajE0a3MzbG8xMjV6ZjBuYzgifQ.80nc_zq59i5m2crvztv0Yw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Timetable generated on Tue Mar 03 2020 08:19:04 GMT+0000 (UTC) using GTFS-to-HTML version 0.18.3 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container-fluid">
+      <div class="row mt-4 mb-4">
+        <div class="col-md-12">
+          <h1 class="timetable-page-label">
+            <div class="route-color-swatch-large" style="background-color: #AB8850"></div><span>LINEA 6 - Borgo Moschella e Borgo Libertà - Circolare</span>
+          </h1>
+        </div>
+      </div>
+      <div class="timetable" id="timetable_id_T1" data-day-list="Lun-Sab" data-direction-name="Via B. Croce" data-timetable-id="T1" data-route-id="Marrone">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="description">LINEA 6 - Borgo Moschella e Borgo Libertà - Circolare | lunedì-sabato</h2>
+            <div class="service-notes"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="map" id="map_timetable_id_T1"></div>
+          </div>
+        </div>
+        <script>
+          (function() {
+            var id = 'timetable_id_T1';
+            var geojson = {
+              "type": "FeatureCollection",
+              "features": [{
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.90803, 41.260301],
+                    [15.907555, 41.260369],
+                    [15.907426, 41.260384],
+                    [15.907355, 41.260416],
+                    [15.907314, 41.260419],
+                    [15.907273, 41.260413],
+                    [15.907237, 41.260397],
+                    [15.906892, 41.260371],
+                    [15.906533, 41.26033],
+                    [15.905606, 41.260472],
+                    [15.905362, 41.26051],
+                    [15.905165, 41.260511],
+                    [15.905058, 41.260531],
+                    [15.90488, 41.260562],
+                    [15.904778, 41.260599],
+                    [15.904624, 41.260694],
+                    [15.904593, 41.260697],
+                    [15.90454, 41.26072],
+                    [15.904507, 41.260769],
+                    [15.904507, 41.260797],
+                    [15.904519, 41.260823],
+                    [15.904541, 41.260846],
+                    [15.904596, 41.260869],
+                    [15.904629, 41.260872],
+                    [15.904733, 41.260962],
+                    [15.904778, 41.261021],
+                    [15.904971, 41.261741],
+                    [15.904992, 41.261823],
+                    [15.903308, 41.262105],
+                    [15.90317, 41.262128],
+                    [15.902877, 41.262258],
+                    [15.902594, 41.262308],
+                    [15.902444, 41.262334],
+                    [15.902538, 41.262673],
+                    [15.902547, 41.262708],
+                    [15.900895, 41.26296],
+                    [15.900561, 41.263013],
+                    [15.899883, 41.263105],
+                    [15.899251, 41.263172],
+                    [15.899204, 41.263193],
+                    [15.899151, 41.263202],
+                    [15.899047, 41.26318],
+                    [15.899008, 41.263151],
+                    [15.898983, 41.263115],
+                    [15.898974, 41.263075],
+                    [15.899008, 41.262999],
+                    [15.899047, 41.262971],
+                    [15.893701, 41.262368],
+                    [15.893405, 41.26233],
+                    [15.889267, 41.262285],
+                    [15.888911, 41.262278],
+                    [15.890241, 41.261368],
+                    [15.890375, 41.261279],
+                    [15.891385, 41.260555],
+                    [15.89165, 41.260395],
+                    [15.891715, 41.260365],
+                    [15.892107, 41.260216],
+                    [15.892758, 41.260027],
+                    [15.89309, 41.259938],
+                    [15.892934, 41.258873],
+                    [15.892873, 41.258462],
+                    [15.891976, 41.251879],
+                    [15.891941, 41.251623],
+                    [15.890706, 41.242841],
+                    [15.889408, 41.234407],
+                    [15.887331, 41.224589],
+                    [15.887036, 41.223002],
+                    [15.886283, 41.218423],
+                    [15.884972, 41.210659],
+                    [15.884846, 41.209911],
+                    [15.884627, 41.207971],
+                    [15.88456, 41.207433],
+                    [15.884444, 41.206749],
+                    [15.884297, 41.20579],
+                    [15.883936, 41.202949],
+                    [15.883665, 41.200908],
+                    [15.883483, 41.199847],
+                    [15.883339, 41.198813],
+                    [15.883336, 41.198414],
+                    [15.883261, 41.198043],
+                    [15.883184, 41.197759],
+                    [15.882982, 41.197158],
+                    [15.881812, 41.194134],
+                    [15.881641, 41.193723],
+                    [15.880755, 41.191532],
+                    [15.88022, 41.190264],
+                    [15.879693, 41.189016],
+                    [15.879243, 41.187998],
+                    [15.878999, 41.187514],
+                    [15.878597, 41.18682],
+                    [15.878159, 41.186136],
+                    [15.877176, 41.184672],
+                    [15.876623, 41.183924],
+                    [15.876025, 41.183063],
+                    [15.872325, 41.177518],
+                    [15.870891, 41.175432],
+                    [15.870694, 41.175125],
+                    [15.870524, 41.174814],
+                    [15.870461, 41.174652],
+                    [15.870418, 41.174484],
+                    [15.870394, 41.174313],
+                    [15.870396, 41.173966],
+                    [15.870449, 41.17362],
+                    [15.870586, 41.173111],
+                    [15.87071, 41.172778],
+                    [15.870924, 41.172281],
+                    [15.872681, 41.168842],
+                    [15.874227, 41.165825],
+                    [15.875995, 41.162447],
+                    [15.876245, 41.161976],
+                    [15.8763, 41.161842],
+                    [15.876336, 41.161712],
+                    [15.876353, 41.161453],
+                    [15.876315, 41.161186],
+                    [15.875439, 41.157649],
+                    [15.87501, 41.155316],
+                    [15.874906, 41.154947],
+                    [15.87439, 41.153677],
+                    [15.874183, 41.153216],
+                    [15.874008, 41.152901],
+                    [15.87031, 41.147374],
+                    [15.870246, 41.147307],
+                    [15.869188, 41.146991],
+                    [15.866701, 41.146258],
+                    [15.85712, 41.143365],
+                    [15.855397, 41.142864],
+                    [15.854141, 41.142445],
+                    [15.853979, 41.142391],
+                    [15.852219, 41.141637]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.87048, 41.147619],
+                    [15.869999, 41.148393],
+                    [15.869907, 41.148647],
+                    [15.869919, 41.148839],
+                    [15.870068, 41.14948],
+                    [15.869972, 41.149722],
+                    [15.869669, 41.149952],
+                    [15.86829, 41.150448],
+                    [15.868132, 41.150569],
+                    [15.868023, 41.150787],
+                    [15.867975, 41.151223],
+                    [15.867939, 41.15184],
+                    [15.86783, 41.152118],
+                    [15.867527, 41.152384],
+                    [15.863086, 41.155131],
+                    [15.862808, 41.155361],
+                    [15.862143, 41.15616],
+                    [15.861622, 41.156801],
+                    [15.861486, 41.157113],
+                    [15.861499, 41.157781],
+                    [15.861348, 41.158052],
+                    [15.861064, 41.158326],
+                    [15.860495, 41.15881],
+                    [15.85873, 41.160407],
+                    [15.856806, 41.162573],
+                    [15.8566, 41.162827],
+                    [15.856479, 41.163045],
+                    [15.856262, 41.163964],
+                    [15.856056, 41.164654],
+                    [15.855729, 41.165307],
+                    [15.855209, 41.1659],
+                    [15.854108, 41.16705],
+                    [15.847573, 41.172178],
+                    [15.847001, 41.172593],
+                    [15.846279, 41.17302],
+                    [15.843347, 41.174648],
+                    [15.843029, 41.174866],
+                    [15.842705, 41.175128],
+                    [15.84036, 41.177267],
+                    [15.840004, 41.177562],
+                    [15.83963, 41.177841],
+                    [15.838769, 41.178421],
+                    [15.838127, 41.17887],
+                    [15.836649, 41.180099],
+                    [15.836405, 41.180286],
+                    [15.836218, 41.180473],
+                    [15.836044, 41.180685],
+                    [15.835103, 41.18229],
+                    [15.833822, 41.184415],
+                    [15.833191, 41.185478],
+                    [15.832779, 41.186202],
+                    [15.832225, 41.187138],
+                    [15.831484, 41.188482],
+                    [15.831116, 41.189149],
+                    [15.830156, 41.191226],
+                    [15.829881, 41.191644],
+                    [15.829407, 41.192149],
+                    [15.827003, 41.194602],
+                    [15.825796, 41.195887],
+                    [15.825219, 41.196416],
+                    [15.824796, 41.196772],
+                    [15.824136, 41.197395],
+                    [15.823064, 41.198553],
+                    [15.822311, 41.199336],
+                    [15.820771, 41.200892],
+                    [15.820316, 41.201378],
+                    [15.819935, 41.201659],
+                    [15.819544, 41.201807],
+                    [15.818756, 41.201992],
+                    [15.818216, 41.202156],
+                    [15.817973, 41.202309],
+                    [15.81763, 41.20262],
+                    [15.816571, 41.2036],
+                    [15.813096, 41.20669],
+                    [15.812326, 41.207427],
+                    [15.811872, 41.20825],
+                    [15.810607, 41.210465],
+                    [15.809842, 41.211977],
+                    [15.809178, 41.21348],
+                    [15.80702, 41.218085],
+                    [15.804715, 41.223256],
+                    [15.80375, 41.222861],
+                    [15.799128, 41.220934],
+                    [15.791062, 41.21765],
+                    [15.790373, 41.21735],
+                    [15.78851, 41.216615],
+                    [15.786762, 41.215914],
+                    [15.781355, 41.213703],
+                    [15.778875, 41.212737],
+                    [15.777041, 41.211959],
+                    [15.773093, 41.21032],
+                    [15.770073, 41.209079],
+                    [15.762842, 41.206152],
+                    [15.762539, 41.20603],
+                    [15.754912, 41.202904],
+                    [15.754193, 41.202598],
+                    [15.744146, 41.19853],
+                    [15.743908, 41.198408],
+                    [15.73864, 41.196267],
+                    [15.731018, 41.193215],
+                    [15.730252, 41.192908],
+                    [15.727394, 41.19172],
+                    [15.726612, 41.191414],
+                    [15.726052, 41.191215],
+                    [15.724104, 41.190578],
+                    [15.722761, 41.190193],
+                    [15.71865, 41.189175],
+                    [15.717579, 41.188899],
+                    [15.716329, 41.188645],
+                    [15.715325, 41.188469],
+                    [15.714549, 41.188366],
+                    [15.712831, 41.18676],
+                    [15.712239, 41.186407],
+                    [15.711975, 41.186251],
+                    [15.711946, 41.186171]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.730252, 41.192908],
+                    [15.735407, 41.194972]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.744146, 41.19853],
+                    [15.754193, 41.202598]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.754912, 41.202904],
+                    [15.759706, 41.204868],
+                    [15.762539, 41.20603],
+                    [15.765928, 41.207393]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.774634, 41.210953],
+                    [15.777041, 41.211959]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.791062, 41.21765],
+                    [15.799128, 41.220934]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.804715, 41.223256],
+                    [15.807534, 41.224413],
+                    [15.810316, 41.225505],
+                    [15.813174, 41.226651],
+                    [15.815709, 41.227649],
+                    [15.816411, 41.227958],
+                    [15.817916, 41.228594],
+                    [15.819359, 41.229153],
+                    [15.820541, 41.22966],
+                    [15.821983, 41.230246],
+                    [15.823955, 41.231067],
+                    [15.827427, 41.232477],
+                    [15.829968, 41.233546],
+                    [15.832688, 41.234577],
+                    [15.834685, 41.235382],
+                    [15.839148, 41.237181],
+                    [15.840222, 41.237692],
+                    [15.845448, 41.240387],
+                    [15.849824, 41.242759],
+                    [15.861336, 41.248674],
+                    [15.863672, 41.249823],
+                    [15.864886, 41.250513],
+                    [15.866648, 41.251429],
+                    [15.867521, 41.25187],
+                    [15.871033, 41.253642],
+                    [15.872998, 41.25467],
+                    [15.874501, 41.255421],
+                    [15.881191, 41.258865],
+                    [15.8826, 41.259636],
+                    [15.885651, 41.261205],
+                    [15.887431, 41.262092],
+                    [15.887596, 41.262167],
+                    [15.887824, 41.262247],
+                    [15.888375, 41.262274],
+                    [15.889601, 41.262292]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.890476, 41.262301],
+                    [15.890999, 41.262307]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.895101, 41.262528],
+                    [15.895661, 41.262592]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.899047, 41.262971],
+                    [15.899099, 41.262953],
+                    [15.899155, 41.262949],
+                    [15.899257, 41.262983],
+                    [15.899292, 41.263017],
+                    [15.899604, 41.263011],
+                    [15.899854, 41.263006],
+                    [15.900909, 41.262863],
+                    [15.901254, 41.262817],
+                    [15.902523, 41.262619]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.902444, 41.262334],
+                    [15.902421, 41.262253],
+                    [15.90317, 41.262128]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.903606, 41.262055],
+                    [15.904783, 41.261857]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.904888, 41.26184],
+                    [15.904992, 41.261823]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.90496, 41.261697],
+                    [15.904851, 41.261288]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.904778, 41.261021],
+                    [15.904786, 41.260951],
+                    [15.904742, 41.260783],
+                    [15.904755, 41.260711],
+                    [15.904799, 41.260663],
+                    [15.90491, 41.260611],
+                    [15.905362, 41.26051]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [15.905887, 41.260429],
+                    [15.906533, 41.26033],
+                    [15.906777, 41.260288],
+                    [15.907111, 41.260258],
+                    [15.907218, 41.260248],
+                    [15.907251, 41.260227],
+                    [15.90729, 41.260215],
+                    [15.907374, 41.26022],
+                    [15.90741, 41.260236],
+                    [15.907969, 41.260236],
+                    [15.908021, 41.260234],
+                    [15.908493, 41.260153],
+                    [15.908515, 41.26015],
+                    [15.908535, 41.260216],
+                    [15.908128, 41.260285]
+                  ]
+                },
+                "properties": {
+                  "agency_name": "Società Trasporto Cerignola",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_id": "S.T.C.",
+                  "route_color": "AB8850",
+                  "route_id": "Marrone",
+                  "route_long_name": "Borgo Moschella e Borgo Libertà",
+                  "route_short_name": "6",
+                  "route_text_color": "",
+                  "route_type": 3
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90387503, 41.26213018]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "30",
+                  "stop_name": "Via Puglie",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "F29100",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "A84E98",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90189, 41.26285]
+                },
+                "properties": {
+                  "stop_id": "56",
+                  "stop_name": "Via F.lli Rosselli",
+                  "wheelchair_boarding": 0,
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "A84E98",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89142, 41.26235]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "14",
+                  "stop_name": "Via Consolare",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "F29100",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "A84E98",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.85225, 41.14166]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "53",
+                  "stop_name": "BORGO MOSCHELLA",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.71198, 41.18626]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "54",
+                  "stop_name": "BORGO LIBERTÀ",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.89129, 41.26225]
+                },
+                "properties": {
+                  "stop_id": "59",
+                  "stop_name": "Via Consolare",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "E51C22",
+                    "route_id": "Rossa",
+                    "route_long_name": "Linea 1",
+                    "route_short_name": "1",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.90385, 41.26197]
+                },
+                "properties": {
+                  "stop_id": "55",
+                  "stop_name": "Via Puglie",
+                  "wheelchair_boarding": 0,
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "A84E98",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }, {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [15.9081, 41.2605]
+                },
+                "properties": {
+                  "location_type": 0,
+                  "stop_id": "13",
+                  "stop_name": "Via B. Croce",
+                  "zone_id": "",
+                  "agency_key": "4d9d562f-d962-47b2-9b0e-101d8c074e30",
+                  "agency_name": "Società Trasporto Cerignola",
+                  "routes": [{
+                    "route_color": "009FE3",
+                    "route_id": "Blu",
+                    "route_long_name": "Linea 2",
+                    "route_short_name": "2",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "F29100",
+                    "route_id": "Arancione",
+                    "route_long_name": "Zona Industriale e Stazione F.S.",
+                    "route_short_name": "4",
+                    "route_text_color": ""
+                  }, {
+                    "route_color": "A84E98",
+                    "route_id": "Viola",
+                    "route_long_name": "Borgo Tressanti",
+                    "route_short_name": "5",
+                    "route_text_color": "ffffff"
+                  }, {
+                    "route_color": "AB8850",
+                    "route_id": "Marrone",
+                    "route_long_name": "Borgo Moschella e Borgo Libertà",
+                    "route_short_name": "6",
+                    "route_text_color": ""
+                  }]
+                }
+              }]
+            };
+            var routeColor = 'AB8850';
+            createMap(id, geojson, routeColor);
+          })();
+        </script>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-container">
+              <table class="table table-striped table-horizontal" summary="This table shows schedules for a selection of key stops on the route for LINEA 6 - Borgo Moschella e Borgo Libertà - Circolare Lun-Sab. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+                <caption class="sr-only">LINEA 6 - Borgo Moschella e Borgo Libertà - Circolare | Lun-Sab</caption>
+                <colgroup>
+                  <col>
+                  <col class="run_0 trip_short_name_07:00" id="trip_id_Marrone001">
+                  <col class="run_1 trip_short_name_13:45" id="trip_id_Marrone002">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="stop-header" scope="col">Stop</th>
+                    <th class="run-header" scope="col">07:00</th>
+                    <th class="run-header" scope="col">13:45</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="stop-row" id="stop_id_13" data-stop-id="13">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via B. Croce</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:00</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">13:45</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_30" data-stop-id="30">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Puglie</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_56" data-stop-id="56">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via F.lli Rosselli</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_14" data-stop-id="14">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Consolare</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_53" data-stop-id="53">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">BORGO MOSCHELLA</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:25</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:10</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_54" data-stop-id="54">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">BORGO LIBERTÀ</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">07:40</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:30</span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_59" data-stop-id="59">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Consolare</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_55" data-stop-id="55">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via Puglie</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                    <td class="stop-time interpolated"><span class="stop-time-text"></span></td>
+                  </tr>
+                  <tr class="stop-row" id="stop_id_13" data-stop-id="13">
+                    <th class="stop-name-container" scope="row">
+                      <div class="stop-name">Via B. Croce</div>
+                      <div class="stop-code"></div>
+                    </th>
+                    <td class="stop-time am interpolated"><span class="stop-time-text">08:10</span></td>
+                    <td class="stop-time pm interpolated"><span class="stop-time-text">14:45</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row timetable-bottom"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
